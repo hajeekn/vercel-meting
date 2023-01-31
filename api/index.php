@@ -137,7 +137,7 @@ if ($type == 'playlist') {
 
 function api_uri() // static
 {
-    return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'https://') . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?');
+    return 'https://'  . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?');
 }
 
 function auth($name)
